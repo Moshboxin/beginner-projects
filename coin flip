@@ -1,0 +1,40 @@
+def win():
+    print("\nYou won! :) \n")
+
+def lose():
+    print("\nYou lose! :( \n")
+
+
+print("Let's flip a coin!")
+
+choice = ""
+
+guess = ""
+
+coin =  ""
+
+choice = input("Heads or tails?\n")
+
+if choice == "heads" or choice == "h" or choice == "H" or choice == "Heads":
+    guess = 1
+    print("\nYou chose heads.\n")
+elif choice == "tails" or choice == "t" or choice == "T" or choice == "Tails":
+    guess = 2
+    print("\nYou chose tails.\n")
+else:
+    print("\nI don't understand that choice, please try again.\n")
+
+import random
+
+coin = random.randint(1,2)
+
+if coin == 1:
+    print("\nCoin flipped. It's heads!\n")
+else:
+    print("\nCoin flipped. It's tails!\n")
+
+if guess == coin:
+    win()
+if guess != coin:
+    lose()
+    
