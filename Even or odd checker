@@ -1,0 +1,20 @@
+#asks for input of number
+number = input("Please enter a number!\n")
+
+#performs a modulo operation of two and four on the number given
+calc_two = int(number) % 2
+
+calc_four = int(number) % 4
+#Output of the modulo operation gives you the remainder.
+#If there's no remainder, it's divisible by that number
+if calc_two == 1:
+    print("\n%s is odd" % number)
+else:
+    print("\n%s is even" % number)
+
+if calc_four == 1:
+    print("\n%s is not a multiple of four tho :(" % number)
+else:
+    print("\n%s is also a multiple of four" % number)
+
+
