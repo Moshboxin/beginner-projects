@@ -35,6 +35,6 @@ else:
 
 if guess == coin:
     win()
-if guess != coin:
+else:
     lose()
     
