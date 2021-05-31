@@ -11,32 +11,32 @@ player_choice = player_move[choice.lower()]
 
 #dictionary for ai moves
 ai_move = {
-    '1' : 'r',
-    '2' : 'p',
-    '3' : 's',
+    '1' : 'rock',
+    '2' : 'paper',
+    '3' : 'scissors',
 }
 
 #generates a random number to use in the ai moves 
 import random
 
-hand = ai_move[str(random.randint(1,3))]
+hand = ai_move[str(random.randint(1,1))]
 
 #comparsion of player and ai input
 battle = {
     "r" : {
-        "r" : "\nYou chose Rock! The robot chose Rock! \nIt's a draw :/",
-        "p" : "\nYou chose Rock! The robot chose Paper! \nYou lose :(",
-        "s" : "\nYou chose Rock! The robot chose Scissors! \nYou win :)",
+        "rock" : "\nYou chose %s! The robot chose %s! \nIt's a draw :/" % (choice.title(), hand.title()),
+        "paper" : "\nYou chose %s! The robot chose %s! \nYou lose :( " % (choice.title(), hand.title()),
+        "scissors" : "\nYou chose %s! The robot chose %s! \nYou win :)" % (choice.title(), hand.title()),
     },
     "p" : {
-        "r" : "\nYou chose Paper! The robot chose Rock! \nYou win! :)",
-        "p" : "\nYou chose Paper! The robot chose Paper! \nIt's a draw :/",
-        "s" : "\nYou chose Paper! The robot chose Scissors \nYou lose :(",
+        "rock" : "\nYou chose %s! The robot chose %s! \nYou win! :)" % (choice.title(), hand.title()),
+        "paper" : "\nYou chose %s! The robot chose %s! \nIt's a draw :/"  % (choice.title(), hand.title()),
+        "scissors" : "\nYou chose %s! The robot chose %s \nYou lose :("  % (choice.title(), hand.title()),
     },
     "s" : {
-        "r" : "\nYou chose Scissors! The robot chose Rock! \nYou lose :(",
-        "p" : "\nYou chose Scissors! The robot chose Paper! \nYou win :)",
-        "s" : "\nYou chose Scissors! The robot chose Scissors! \n It's a draw :/",
+        "rock" : "\nYou chose %s! The robot chose %s! \nYou lose :("  % (choice.title(), hand.title()),
+        "paper" : "\nYou chose %s! The robot chose %s! \nYou win :)"  % (choice.title(), hand.title()),
+        "scissors" : "\nYou chose %s! The robot chose %s! \n It's a draw :/" % (choice.title(), hand.title()),
     }
 }
 
