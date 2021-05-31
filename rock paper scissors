@@ -1,11 +1,12 @@
-choice = input("Rock, Paper, Scissors, Shoot!")
+
+choice = input("Rock, Paper, Scissors, Shoot!\n")
 
 player_move = {
     "rock" : "r",
     "paper" : "p",
     "scissors" : "s",            
 }
-
+#changes the case sensitive input to all lowercase to use in the dictionary
 player_choice = player_move[choice.lower()]
 
 #dictionary for ai moves
@@ -18,7 +19,7 @@ ai_move = {
 #generates a random number to use in the ai moves 
 import random
 
-hand = ai_move[str(random.randint(2,2))]
+hand = ai_move[str(random.randint(1,3))]
 
 #comparsion of player and ai input
 battle = {
